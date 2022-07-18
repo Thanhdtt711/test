@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object trong Javascript</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <div class="row mb-5">
+            <div class="col-lg-4"></div>
+            <div class="form-group col-lg-4">
+                <label for="email">Tìm kiếm:</label>
+                <input type="text" onkeyup="searchObj()" id="myInput" class="form-control searchObj" id="email"
+                    placeholder="Search...">
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+        <a href="#new_customer" class="btn btn-primary add" data-bs-toggle="modal">
+            Thêm mới
+        </a>
+        <hr>
+        <table class="table table-bordered" id="myTable">
+            <thead>
+                <tr>
+                    <th>Tên</th>
+                    <th>Email</th>
+                    <th>Tuổi</th>
+                    <th>Sửa</th>
+                    <th>Xoá</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <ul class="pagination">
+        </ul>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="new_customer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thêm khách hàng mới</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" class="add-customer">
+                    <div class="modal-body">
+                        <div class="msg"></div>
+                        <div class="mb-3">
+                            <label for="">
+                                Tên
+                            </label>
+                            <input type="text" name="name" class="form-control" placeholder="Tên..." />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="">
+                                Email
+                            </label>
+                            <input type="text" name="email" class="form-control" placeholder="Email..." />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="">
+                                Tuổi
+                            </label>
+                            <input type="text" name="age" class="form-control" placeholder="Tuổi..." />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/js/bootstrap.min.js"></script>
+    <script src="js/object.js"></script>
+</body>
+
+</html>
